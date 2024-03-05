@@ -1,0 +1,94 @@
+<style>
+    p{
+        text-align: center;
+    position: relative;
+    color: green;
+    font-style: italic;
+    top: 200px;
+    }
+    span{
+       
+        color: rgb(128, 0, 96);
+    }
+    h1{
+        text-align: center;
+    position: relative;
+    color: green;
+    font-style: italic;
+    top: 200px;
+    }
+    .yash{
+        border: 3px solid red;
+    height: 500;
+    position: relative;
+    }
+</style>
+<body>
+<p>
+    <b>num1: </b><input>
+</p>
+<p>
+    <b>num2: </b><input>
+</p>
+<P>
+      
+      <input type="button" value="Sum" onclick="f1()">
+      <input type="button" value="sub" onclick="f2()">
+</p>
+<p>
+       <input type="button" value="mult" onclick="f3()">
+       <input type="button" value="div" onclick="f4()">
+</p>
+
+<h1> RESULT:<span></span> </h1>
+</body>
+<script>
+   var yash1=document.querySelector("body > p:nth-child(1) > input")
+   var yash2=document.querySelector("body > p:nth-child(2) > input")
+   var Result=document.querySelector("body > h1 > span")
+
+    function f1(){
+        var no1=yash1.value;
+        var no2=yash2.value;
+        var  sum = parseInt(no1) + parseInt(no2);
+         yash1.value=""
+         yash2.value=""
+       
+        console.log(sum);
+        if(sum==100){
+            alert("you achived")
+            Result.style.color="red";
+        }
+        Result.innerText = sum;
+    }
+
+    function f2(){
+        var no1=yash1.value;
+        var no2=yash2.value;
+        var  sub = parseInt(no1) - parseInt(no2);
+         yash1.value=""
+         yash2.value=""
+        Result.innerText = sub;
+            
+        }
+    function f3(){
+        var no1=yash1.value;
+        var no2=yash2.value;
+        var  mult = parseInt(no1) * parseInt(no2);
+         yash1.value=""
+         yash2.value=""
+        Result.innerText = mult;
+        }
+    function f4(){
+        var no1=yash1.value;
+        var no2=yash2.value;
+        var  div= parseInt(no1) / parseInt(no2);
+         yash1.value=""
+         yash2.value=""
+        Result.innerText = div;
+        }
+
+    
+    
+    
+</script>
